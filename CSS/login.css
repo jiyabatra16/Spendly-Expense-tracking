@@ -1,0 +1,822 @@
+/* =====================================================
+   SPENDLY LOGIN / SIGNUP
+   ===================================================== */
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #090909;
+
+    color: #111;
+}
+
+
+/* ================= MAIN PAGE ================= */
+
+.auth-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 560px);
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 45px;
+
+    background: #090909;
+}
+
+
+/* =====================================================
+   LEFT BRAND PANEL
+   ===================================================== */
+
+.brand-panel {
+
+    min-height: 700px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 28px 0 0 28px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* subtle background */
+
+.brand-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: #eaf8f2;
+
+    top: -170px;
+
+    left: -150px;
+}
+
+
+.brand-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: #f4fbf8;
+
+    bottom: -150px;
+
+    right: -120px;
+}
+
+
+/* BRAND CONTENT */
+
+.brand-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    width: 100%;
+
+    padding: 50px;
+}
+
+
+/* =====================================================
+   ILLUSTRATION
+   ===================================================== */
+
+.illustration {
+
+    position: relative;
+
+    width: 330px;
+
+    height: 300px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Person */
+
+.person {
+
+    width: 150px;
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 120px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Floating icons */
+
+.floating-icon {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    font-size: 38px;
+}
+
+
+.chart-icon {
+
+    top: 30px;
+
+    left: 20px;
+}
+
+
+.pig-icon {
+
+    top: 50px;
+
+    right: 15px;
+}
+
+
+/* Coins */
+
+.money {
+
+    position: absolute;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffd35a;
+
+    color: #8b6800;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(180, 130, 0, 0.18);
+
+    z-index: 3;
+}
+
+
+.money-one {
+
+    left: 55px;
+
+    bottom: 30px;
+}
+
+
+.money-two {
+
+    right: 45px;
+
+    bottom: 15px;
+}
+
+
+/* BRAND NAME */
+
+.brand-content h1 {
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: #080808;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+
+.brand-content > p {
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #222;
+}
+
+
+/* =====================================================
+   RIGHT AUTH PANEL
+   ===================================================== */
+
+.auth-panel {
+
+    min-width: 0;
+
+    min-height: 700px;
+
+    background: #ffffff;
+
+    border-radius: 0 28px 28px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 45px 55px;
+}
+
+
+/* CARD */
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 470px;
+}
+
+
+/* =====================================================
+   TABS
+   ===================================================== */
+
+.tabs {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    height: 58px;
+
+    margin-bottom: 30px;
+
+    background: #f2f2f2;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.tab {
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: 0.25s ease;
+}
+
+
+.tab:hover {
+
+    color: #078f64;
+}
+
+
+.tab.active {
+
+    background: #eeeeee;
+
+    color: #078f64;
+}
+
+
+.tab.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    height: 3px;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: #079c69;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.auth-form {
+
+    width: 100%;
+}
+
+
+.auth-form.hidden {
+
+    display: none;
+}
+
+
+/* HEADING */
+
+.form-heading {
+
+    margin-bottom: 27px;
+}
+
+
+.form-heading h2 {
+
+    font-size: 31px;
+
+    line-height: 1.2;
+
+    margin-bottom: 7px;
+
+    color: #111;
+}
+
+
+.form-heading p {
+
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   INPUTS
+   ===================================================== */
+
+.input-group {
+
+    margin-bottom: 14px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+    color: #111;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    padding: 0 16px;
+
+    font-size: 16px;
+
+    color: #222;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.input-group input::placeholder {
+
+    color: #8a8a8a;
+}
+
+
+.input-group input:focus {
+
+    border-color: #079c69;
+
+    box-shadow:
+        0 0 0 3px rgba(7, 156, 105, 0.1);
+}
+
+
+/* PASSWORD */
+
+.password-box {
+
+    position: relative;
+}
+
+
+.password-box input {
+
+    padding-right: 55px;
+}
+
+
+.eye-button {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 15px;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+   ===================================================== */
+
+.submit-button {
+
+    width: 100%;
+
+    height: 56px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #079c69;
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.submit-button:hover {
+
+    background: #067f55;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(7, 156, 105, 0.2);
+}
+
+
+.submit-button:active {
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   SWITCH LOGIN/SIGNUP
+   ===================================================== */
+
+.switch-text {
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-top: 18px;
+}
+
+
+.switch-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #078f64;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 0 3px;
+}
+
+
+.switch-button:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   MESSAGE
+   ===================================================== */
+
+.message {
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    min-height: 20px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .auth-page {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+        gap: 25px;
+    }
+
+
+    .brand-panel {
+
+        min-height: 450px;
+
+        border-radius: 25px;
+    }
+
+
+    .auth-panel {
+
+        min-height: auto;
+
+        border-radius: 25px;
+
+        padding: 45px 35px;
+    }
+
+
+    .illustration {
+
+        height: 230px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .brand-content h1 {
+
+        font-size: 65px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .auth-page {
+
+        padding: 12px;
+
+        gap: 12px;
+    }
+
+
+    .brand-panel {
+
+        min-height: 350px;
+
+        border-radius: 20px;
+    }
+
+
+    .brand-content {
+
+        padding: 25px;
+    }
+
+
+    .illustration {
+
+        width: 260px;
+
+        height: 190px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .person {
+
+        font-size: 80px;
+    }
+
+
+    .floating-icon {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 28px;
+    }
+
+
+    .chart-icon {
+
+        left: 10px;
+
+        top: 20px;
+    }
+
+
+    .pig-icon {
+
+        right: 10px;
+
+        top: 35px;
+    }
+
+
+    .money {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+
+    .brand-content h1 {
+
+        font-size: 48px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .brand-content > p {
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .auth-panel {
+
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .tab {
+
+        font-size: 18px;
+    }
+
+
+    .form-heading h2 {
+
+        font-size: 26px;
+    }
+
+}
