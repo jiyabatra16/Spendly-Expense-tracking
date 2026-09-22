@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spendly - Login & Signup</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+        <!-- ================= LEFT SPENDLY PANEL ================= -->
+
+        <section class="brand-panel">
+
+            <div class="brand-content">
+
+                <!-- Illustration -->
+                <div class="illustration">
+
+                    <div class="floating-icon chart-icon">
+                        📊
+                    </div>
+
+                    <div class="person">
+                        👨‍💼
+                    </div>
+
+                    <div class="floating-icon pig-icon">
+                        🐷
+                    </div>
+
+                    <div class="money money-one">
+                        ₹
+                    </div>
+
+                    <div class="money money-two">
+                        ₹
+                    </div>
+
+                </div>
+
+                <h1>SPENDLY</h1>
+
+                <p>
+                    MANAGE YOUR MONEY SMARTLY
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RIGHT AUTH PANEL ================= -->
+
+        <section class="auth-panel">
+
+            <div class="auth-card">
+
+                <!-- Tabs -->
+
+                <div class="tabs">
+
+                    <button
+                        type="button"
+                        id="loginTab"
+                        class="tab"
+                    >
+                        LOGIN
+                    </button>
+
+                    <button
+                        type="button"
+                        id="signupTab"
+                        class="tab active"
+                    >
+                        SIGNUP
+                    </button>
+
+                </div>
+
+
+                <!-- ================= LOGIN FORM ================= -->
+
+                <form
+                    id="loginForm"
+                    class="auth-form hidden"
+                >
+
+                    <div class="form-heading">
+
+                        <h2>
+                            Welcome Back
+                        </h2>
+
+                        <p>
+                            Login to manage your money.
+                        </p>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="loginEmail">
+                            Email Id
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="eye-button"
+                                onclick="togglePassword('loginPassword', this)"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Login
+                    </button>
+
+
+                    <p class="switch-text">
+                        Don't have an account?
+
+                        <button
+                            type="button"
+                            class="switch-button"
+                            id="goSignup"
+                        >
+                            Signup
+                        </button>
+                    </p>
+
+                    <p
+                        id="loginMessage"
+                        class="message"
+                    ></p>
+
+                </form>
+
+
+                <!-- ================= SIGNUP FORM ================= -->
+
+                <form
+                    id="signupForm"
+                    class="auth-form"
+                >
+
+                    <div class="form-heading">
+
+                        <h2>
+                            Create your account
+                        </h2>
+
+                        <p>
+                            Start managing your money smarter.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Full Name -->
+
+                    <div class="input-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label for="signupEmail">
+                            Email Id
+                        </label>
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Enter your password"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="eye-button"
+                                onclick="togglePassword('signupPassword', this)"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Mobile -->
+
+                    <div class="input-group">
+
+                        <label for="mobileNumber">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobileNumber"
+                            placeholder="+91 00000 00000"
+                            pattern="[0-9+\-\s]{10,16}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Signup -->
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Signup
+                    </button>
+
+
+                    <p class="switch-text">
+
+                        Already have an account?
+
+                        <button
+                            type="button"
+                            class="switch-button"
+                            id="goLogin"
+                        >
+                            Login
+                        </button>
+
+                    </p>
+
+
+                    <p
+                        id="signupMessage"
+                        class="message"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../JS/login.js"></script>
+
+</body>
+
+</html>
