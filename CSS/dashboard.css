@@ -1,0 +1,564 @@
+/* =====================================================
+   SPENDLY DASHBOARD CSS
+   ===================================================== */
+
+
+/* ================= RESET ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f7;
+    color: #18352b;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #e0ebe6;
+}
+
+
+.logo {
+    text-decoration: none;
+    color: #087b51;
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #426057;
+}
+
+
+nav a:hover {
+    color: #079b63;
+}
+
+
+nav button {
+    border: none;
+
+    background: #fdecec;
+    color: #b42318;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+nav button:hover {
+    background: #fbdada;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 45px 0;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.eyebrow {
+    color: #079b63;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.welcome h1 {
+    font-size: 34px;
+
+    margin: 7px 0;
+}
+
+
+.welcome p:last-child {
+    color: #71817b;
+}
+
+
+.add-btn {
+    border: none;
+
+    background: #079b63;
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.add-btn:hover {
+    background: #067d50;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+}
+
+
+.summary-card {
+    background: white;
+
+    border: 1px solid #e0ebe6;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+.summary-card > span {
+    font-size: 25px;
+
+    background: #e8f7ef;
+
+    padding: 13px;
+
+    border-radius: 11px;
+}
+
+
+.summary-card p {
+    color: #75857f;
+
+    font-size: 13px;
+}
+
+
+.summary-card h2 {
+    margin-top: 5px;
+
+    font-size: 22px;
+}
+
+
+/* ================= TRANSACTIONS ================= */
+
+.transactions {
+    width: 100%;
+}
+
+
+.heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.heading h2 {
+    font-size: 24px;
+}
+
+
+.heading select {
+    padding: 9px;
+
+    border: 1px solid #d6e1dc;
+
+    border-radius: 8px;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+
+.transaction {
+    background: white;
+
+    border: 1px solid #e0ebe6;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.icon {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #e8f7ef;
+
+    border-radius: 10px;
+}
+
+
+.cat {
+    color: #84918d;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+/* INCOME */
+
+.income {
+    color: #07834f;
+
+    font-weight: bold;
+}
+
+
+/* EXPENSE */
+
+.expense {
+    color: #c62828;
+
+    font-weight: bold;
+}
+
+
+/* EMPTY TRANSACTION MESSAGE */
+
+.empty {
+    background: white;
+
+    text-align: center;
+
+    padding: 45px;
+
+    border-radius: 14px;
+
+    color: #77847f;
+
+    border: 1px solid #e0ebe6;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+.modal.active {
+    display: flex;
+}
+
+
+.modal-box {
+    width: 470px;
+
+    max-width: 100%;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    position: relative;
+}
+
+
+.close {
+    position: absolute;
+
+    right: 15px;
+    top: 8px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+.close:hover {
+    color: #b42318;
+}
+
+
+.modal-box h2 {
+    margin-bottom: 20px;
+}
+
+
+.modal-box form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.modal-box label {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+}
+
+
+.modal-box input,
+.modal-box select {
+    padding: 12px;
+
+    border: 1px solid #d7dfdc;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.modal-box input:focus,
+.modal-box select:focus {
+    border-color: #079b63;
+}
+
+
+/* SAVE BUTTON */
+
+.save {
+    border: none;
+
+    background: #079b63;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+
+.save:hover {
+    background: #067d50;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #85938e;
+
+    font-size: 14px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 850px) {
+
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .welcome {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    nav {
+        gap: 10px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    nav button {
+        padding: 8px 10px;
+    }
+
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .container {
+        width: 90%;
+
+        padding: 30px 0;
+    }
+
+
+    .welcome h1 {
+        font-size: 27px;
+    }
+
+
+    .heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .heading select {
+        width: 100%;
+    }
+
+
+    .transaction {
+        padding: 13px;
+    }
+
+
+    .modal-box {
+        padding: 22px;
+    }
+
+}
