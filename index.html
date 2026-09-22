@@ -4,169 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Spendly - Expense Tracker</title>
+    <title>Spendly | Smart Expense Tracker</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
+    <!-- ================= NAVBAR ================= -->
 
-    <a href="index.html" class="logo">
-        💰 SPENDLY
-    </a>
+    <header class="navbar">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="login.html" class="nav-btn">
-            Get Started
+        <a href="index.html" class="brand">
+            <span class="brand-icon">₹</span>
+
+            <span>
+                <strong>SPENDLY</strong>
+                <small>SMART EXPENSE TRACKER</small>
+            </span>
         </a>
-    </nav>
 
-</header>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="login.html">Login</a>
+            <a href="login.html#signup">Signup</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
 
-
-<main class="hero">
-
-    <section class="hero-content">
-
-        <p class="small-title">
-            PERSONAL EXPENSE TRACKER
-        </p>
-
-        <h1>
-            Manage Your
-            <span>Money</span>
-            Smartly.
-        </h1>
-
-        <p class="description">
-            Track your income, expenses and balance
-            in one simple place. Spendly helps you
-            understand where your money goes.
-        </p>
-
-        <div class="buttons">
-
-            <a href="login.html" class="primary-btn">
-                Start Tracking
-            </a>
-
-            <a href="#features" class="secondary-btn">
-                Explore Features
-            </a>
-
-        </div>
-
-    </section>
+    </header>
 
 
-    
+    <!-- ================= HERO ================= -->
 
-    <section class="illustration">
+    <main class="hero">
 
-        <div class="card chart-card">
+        <section class="hero-content">
 
-            <h3>Monthly Spending</h3>
+            <p class="welcome">
+                SMART EXPENSE TRACKER
+            </p>
 
-            <div class="chart">
+            <h1>
+                Manage Your
+                <span>Money</span>
+                Smartly.
+            </h1>
 
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-                <div class="bar bar4"></div>
-                <div class="bar bar5"></div>
-                <div class="bar bar6"></div>
+            <p class="description">
+                Spendly helps you track your income,
+                expenses, balance and transactions
+                in one simple place.
+            </p>
+
+            <div class="buttons">
+
+                <a href="login.html" class="primary-btn">
+                    Get Started
+                </a>
+
+                <a href="dashboard.html" class="secondary-btn">
+                    View Dashboard
+                </a>
 
             </div>
 
+        </section>
+
+
+        <!-- ================= ILLUSTRATION ================= -->
+
+        <section class="illustration">
+
+            <!-- Main chart card -->
+
+            <div class="chart-card">
+
+                <div class="chart-heading">
+
+                    <h2>
+                        Monthly Spending
+                    </h2>
+
+                    <span>₹</span>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    <div class="bar bar4"></div>
+                    <div class="bar bar5"></div>
+
+                </div>
+
+
+                <!-- Pig -->
+
+                <div class="pig">
+
+                    <div class="pig-face">
+
+                        <div class="ear left-ear"></div>
+                        <div class="ear right-ear"></div>
+
+                        <div class="eye eye-left"></div>
+                        <div class="eye eye-right"></div>
+
+                        <div class="snout">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Rupee bubbles -->
+
+            <div class="money money1">
+                ₹
+            </div>
+
+            <div class="money money2">
+                ₹
+            </div>
+
+            <div class="money money3">
+                ₹
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ₹
+            </div>
+
+            <h3>
+                Track Expenses
+            </h3>
+
+            <p>
+                Keep all your daily expenses
+                organized in one place.
+            </p>
+
         </div>
 
 
-        <div class="pig">
-            🐷
+        <div class="feature">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                View Analytics
+            </h3>
+
+            <p>
+                Understand your spending
+                through simple visual charts.
+            </p>
+
         </div>
 
 
-        <div class="money">
-            💰
-        </div>
+        <div class="feature">
 
+            <div class="feature-icon">
+                💰
+            </div>
 
-        <div class="coin coin1">
-            ₹
-        </div>
+            <h3>
+                Manage Money
+            </h3>
 
-        <div class="coin coin2">
-            ₹
-        </div>
+            <p>
+                Make smarter financial decisions
+                with Spendly.
+            </p>
 
-        <div class="coin coin3">
-            ₹
         </div>
 
     </section>
 
-</main>
 
-
-<section class="features" id="features">
-
-    <div class="feature-card">
-
-        <span>📊</span>
-
-        <h3>
-            Track Expenses
-        </h3>
+    <footer>
 
         <p>
-            Record and review your daily transactions.
+            © 2026 Spendly — Manage Your Money Smartly
         </p>
 
-    </div>
+    </footer>
 
 
-    <div class="feature-card">
-
-        <span>💰</span>
-
-        <h3>
-            Monitor Balance
-        </h3>
-
-        <p>
-            See your income, expenses and balance.
-        </p>
-
-    </div>
-
-
-    <div class="feature-card">
-
-        <span>🔐</span>
-
-        <h3>
-            Easy Login
-        </h3>
-
-        <p>
-            Simple login and signup system.
-        </p>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    © 2026 Spendly -
-    Personal Expense Tracker
-
-</footer>
+    <script src="script.js"></script>
 
 </body>
 </html>
